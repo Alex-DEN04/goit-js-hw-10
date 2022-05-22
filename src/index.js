@@ -16,6 +16,7 @@ const DEBOUNCE_DELAY = 300;
 refs.input.addEventListener('input', debounce(сountrySearch, DEBOUNCE_DELAY));
 
 function сountrySearch(event) {
+    event.preventDefault();
     const inputValue = event.target.value.trim();
     if (inputValue === '') {
         refs.countryList.innerHTML = '';
